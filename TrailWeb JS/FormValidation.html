@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form validation</h1>
+    <form onsubmit = "return validate()" action="newPage.html">
+        <input type="text" id="user" placeholder="username" > 
+        <label id="labid" style = "color: red; visibility: hidden">invalid</label>
+        <br><br>
+        <input type="password" id= "pass" placeholder="password" >
+        <label id= "label" style = "color:red; visibility:hidden">invalid password</label>
+        <br><br>
+        <button  type = "submit">submit</button>
+    </form>
+</body>
+</html>
+<script>
+    function validate(){
+        var username = document.getElementById("user");
+        var password = document.getElementById("pass");
+        if(username.value.trim() == "" ) {
+            //alert("user name is blank");
+            username.style.border = "solid 3px red"
+            document.getElementById("labid").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim() == ""){
+            //alert("password is blank");
+            password.style.border = "solid 3px red";
+            document.getElementById("label").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim().length < 5){
+            alert("password is short")
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script> 
+<!-- another method is below check out  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form validation</h1>
+    <form onsubmit = "return validate()" action="newPage.html">
+        <input type="text" id="user" placeholder="username" required> 
+        <br><br>
+        <input type="password" id= "pass" placeholder="password" required>
+        <br><br>
+        <button  type = "submit">submit</button>
+    </form>
+</body>
+</html> -->

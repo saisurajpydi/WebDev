@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>using get element by class name</h1>
+    <p class = "myPara">para 1</p>
+    <p class = "myPara">para 2</p>
+    <p class = "myPara">para 3</p>
+    <p class = "myPara">para 4</p>
+    <p class = "myPara">para 5</p>
+    <br>
+    <button onclick = "fn()">click me </button>
+
+</body>
+</html>
+<script>
+    function fn() {
+        var para = document.getElementsByClassName("myPara");
+        for(var i = 0; i < para.length;i+=1){
+            para[i].style.color = "red"
+        }
+    }
+</script>

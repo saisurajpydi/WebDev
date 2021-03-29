@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>regex expressions</h1>
+    <input type="text" id = "user" placeholder = "username">
+    <button onclick = "fn()">click me</button>
+    <br>
+    <label id="lab" style = "color: red; visibility:hidden ">invalid user</label>
+</body>
+</html>
+<script>
+    function fn() {
+        var user = document.getElementById("user").value;
+        var regx = /E00/i;
+        // below mentioned is also imp
+        // var regx = /[123]abc/i; (1abc or 2abc or 3abc)
+        // var regx = /[a-x A-X]abc/;  same as /[a-x]abc/i; (those expressions to be matched)
+        // var regx = /[^a-z]abc/i; (^ represents not )
+
+
+        //var regx = new RegExp("E00","i");   //similar to the above regx operaton 
+        if(regx.test(user)){
+            alert("authorized user");
+        }else{
+            document.getElementById("lab").style.visibility="visible";
+        }
+
+        
+    }
+</script>

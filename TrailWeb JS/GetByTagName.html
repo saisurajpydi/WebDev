@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get getElementById</h1>
+    <p>para 1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <p>para 4</p>
+    <p>para 5</p>
+    <p>para 6</p>
+    <button onclick = "fn()">click me</button>
+</body>
+</html>
+<script>
+    function fn() {
+        var para = document.getElementsByTagName("p");
+        para[0].style.color = "red"; 
+        para[1].style.fontWeight = "bold"; 
+        para[2].style.fontStyle = "italic";
+        for(var i = 3;i<para.length;i+=1){
+            para[i].style.color = "blue";
+        }
+    }
+    //fn()
+</script>

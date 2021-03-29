@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dom manipulation using radio button</h1>
+    <input name = "same" type="radio" id="rd1" value = "suraj pydi">suraj pydi
+    <br>
+    <input name = "same" type="radio" id= rd2 value = "pgncrs">pgncrs
+    <br>
+    <button onclick = "fn()"> try me</button>
+
+</body>
+</html>
+<script>
+    function fn() {
+        var rd1 = document.getElementById("rd1");
+        var rd2 = document.getElementById("rd2");
+        if(rd1.checked == true){
+            alert(rd1.value + " is clickes ")
+        }else if(rd2.checked == true){
+            alert(rd2.value + " is clicked")
+        }else{
+            alert("None is selected")
+        }
+        
+    }
+</script>
