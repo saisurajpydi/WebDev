@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object based in Js</title>
+</head>
+<body>
+    <h1>object based in js</h1>
+    <script>
+        function cars(car_brand,car_model,car_price){
+            this.car_brand = car_brand;
+            this.car_model = car_model;
+            this.car_price = car_price;
+            this.autoPilot = function(){
+                document.write("1 this is a auto pilot car");
+            }
+        }
+        // object creation in js 
+        var c1 = new cars("telsa","model 3",4399);
+        c1.autoPilot();
+    </script>
+    <br>
+    <script>
+        function cars(car_brand,car_model,car_price){
+            this.car_brand = car_brand;
+            this.car_model = car_model;
+            this.car_price = car_price;
+            this.autoPilot = function(){
+                return "2 this is a auto pilot car";
+            }
+        }
+        // object creation in js 
+        var c1 = new cars("telsa","model 3",4399);
+        document.write(c1.autoPilot());
+    </script>
+</body>
+</html>

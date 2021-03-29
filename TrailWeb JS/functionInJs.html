@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions in JS</title>
+</head>
+
+<body>
+    <h1>functions in JS</h1>
+    <script type="text/javaScript">
+        function addNo(){
+            var a = 1;
+            var b = 2;
+            var result = a + b;
+            document.write("total = " +result);
+
+        }
+        addNo();
+    </script>
+    <br>
+    <script>
+        function addNo(a, b) {
+            var total = a + b;  
+            document.write(total);
+            document.write("<br>")
+
+        }
+        addNo(5, 10)
+        addNo("sai", " suraj")
+    </script>
+    <br>
+    <script>
+        function addNo(a, b) {
+            var total = a + b;
+            return total
+
+        }
+        document.write(addNo(10, 10))
+        document.write("<br>")
+        document.write(addNo("pydi", " suraj"))
+    </script>
+</body>
+
+</html>

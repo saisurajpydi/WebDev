@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web form</title>
+</head>
+
+<body>
+    <div>
+        <h1>travel form</h1>
+        <form action="form.js"></form>
+        <input type="text" placeholder="name plz"><br>
+        <br>
+        <label for="sectionida">
+            <!-- same section name one radio can be clicked -->
+            <input type="radio" value="section a" name="section" id="sectionida">section a
+        </label>
+        <label for="sectionidb">
+            <input type="radio" value="section b" name="section" id="sectionidb">section b
+        </label>
+        <label for="sectionidc">
+            <input type="radio" value="section c" name="section" id="sectionidc">section c
+        </label>
+        <br>
+        <!-- does'nt work by clicking on name -->
+        <!-- id and classes are useful while using css -->
+        <label for="housename">
+            <input type="radio" value="hosue red" name="house" id="housename">red
+            <input type="radio" value="hosue blue" name="house" id="housename">blue
+            <input type="radio" value="hosue green" name="house" id="housename">green
+        </label>
+        <br>
+        <!-- below 2 labels wrk diff try and c -->
+        <label for="foodcanteen">want food</label><br>
+        <input type="checkbox" name="canteen card" id="foodcanteen" class="red">want id card <br>
+
+        <label for="foodcanteen1">
+            <input type="checkbox" name="canteen card" id="foodcanteen1" class="red">want id card <br>
+        </label>
+
+        <!-- text area -->
+        <label for="explain">
+            <textarea name="explain" id="explain" cols="30" rows="10">explain y u need holiday</textarea>
+        </label>
+        <label for="explain">
+            <textarea name="explain" id="explain" cols="30" rows="10" placeholder="explain y u need holiday"></textarea>
+        </label>
+        <br>
+        <!-- select is used to choose from given choices -->
+        <select name="car" id="car">
+            <option value="no car">select ur car</option>
+            <option value="onmi">omni</option>
+            <option value="skoda">skoda</option>
+            <option value="bmw">bmw</option>
+        </select>
+    </div>
+</body>
+
+</html>
