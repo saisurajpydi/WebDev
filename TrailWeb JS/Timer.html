@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeout() and clearTimeout() example</h1>
+    <button onclick = "start()">start</button>
+    <h2 id = "h2id">this text will change in 5 sec, after clicking start button</h2>
+    <button onclick= "end()">end</button>
+    <br>
+    <br><hr><br>
+    <h1>setInterval() and clearInterval() example</h1>
+    <button onclick = "startI()">stopwatch start</button>
+    <h2 id = "hid">click start to start the stopwatch </h2>
+    <button onclick= "endI()">stopwatch end</button>
+
+
+</body>
+</html>
+<script>
+    var ID = 0; 
+    var id = 0 ;
+    var seconds = 1;
+    function printMsg(){
+        document.getElementById("h2id").innerHTML = "data displaying after 5 sec of clicking start button";
+    }
+    function start(){
+        ID= window.setTimeout(printMsg,5000);
+
+    }
+    function end(){
+        window.clearTimeout(ID);
+    }
+    function printText(){
+        document.getElementById("hid").innerHTML = seconds +" seconds";
+        seconds+=1;
+    }
+    function startI() {
+        id = window.setInterval(printText,1000);
+    }
+    function endI(){
+        window.clearInterval(id);
+    }
+
+</script>

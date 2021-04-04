@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zoom In and Zoom Out using MouseOver and MouseOut</h1>
+    <br><br>
+    <img id = "img1" onmouseover="increase()" onmouseout="decrease()" src="image.jpeg" alt="not available" width = "100px">
+
+</body>
+</html>
+<script>
+    var id= 0;
+    var width = 100
+    function increase(){
+        clearInterval(id)
+        id = setInterval(expand,20);
+
+    }
+    function decrease(){
+        clearInterval(id)
+        id = setInterval(shrink,20);
+    }
+    function expand(){
+        if(width < 200){
+            width =width + 2;
+            document.getElementById("img1").width=width;
+            console.log(width)
+        }else{
+            clearInterval(id)
+        }
+    }
+    function shrink(){
+        if(width > 100){
+            width = width - 2;
+            document.getElementById("img1").width=width;
+            console.log(width)
+        }else{
+            clearInterval(id)
+        }
+    }
+</script>

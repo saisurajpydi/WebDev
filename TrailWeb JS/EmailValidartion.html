@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>email validation </h1>
+    <input type="text" id= "email" placeholder="enter email id">
+    <button onclick = "fn()"> click me</button><br>
+    <label id = "lab" style = "color: red; visibility: hidden">invalid</label>
+</body>
+</html>
+<script>
+    function fn() {
+        var text = document.getElementById("email").value;
+        //var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2-8})(.[a-z]{2-8})? $ /;
+        var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        //var regx = /^[5-9][a-z]{8}0$/;
+        if(regx.test(text)){
+            email.style.border="solid 3px greem";
+            document.getElementById("lab").innerHTML = "valid"
+            document.getElementById("lab").style.visibility="visible";
+            document.getElementById("lab").style.color="green";
+        }else{
+            email.style.border = "solid 3px red";
+            document.getElementById("lab").style.visibility="visible";
+        }
+
+    }
+</script>

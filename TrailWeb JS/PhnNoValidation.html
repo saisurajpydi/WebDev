@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>phn no validation </h1>
+    <input type="text" id = "phn" placeholder = "enter mobile number">
+    <label id= "invalid" style= "color: red; visibility: hidden">invalid</label>
+    <br><br>
+    <button onclick = "fn()"> validate </button>
+    <br><br>
+
+</body>
+</html>
+<script>
+    function fn() {
+        var text = document.getElementById("phn").value;
+        var regx = /^[5-9][a-z]{8}0$/;
+
+        if(regx.test(text)){
+            phn.style.border= "solid 3px green";
+            document.getElementById("invalid").innerHTML="valid";
+            document.getElementById("invalid").style.visibility = "visible";
+            document.getElementById("invalid").style.color="green";
+
+        }else{
+            phn.style.border = "solid 3px red";
+            document.getElementById("invalid").style.visibility="visible";
+            
+        }
+        
+    }
+</script>
+
+<!-- 
+function fn() {
+    var text = document.getElementById("phn").value;
+    var regx = /^[5-9][a-z]{8}0$/;
+
+    if(regx.test(text)){
+        document.getElementById("valid").style.visibility="visible";
+    }else{
+        phn.style.border = "solid 3px red";
+        document.getElementById("invalid").style.visibility="visible";
+        
+    }
+    
+}
+ -->
