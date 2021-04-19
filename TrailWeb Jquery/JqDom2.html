@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>jquery - DOM manipulations </h1>
+    <link rel="stylesheet" href="jqCss.css">
+</head>
+<!-- append()- insert content at the end of the selected element
+prepend()- insert content at the beginning of the element 
+after() - insert content after the selected elements
+before() - insert content before the selected elements -->
+<body>
+    <div id="div1" class="div">
+    <button id="b1">Append</button>
+    <button id="b2" >After</button>
+    <button id="b3"> Prepend</button>
+    <Button id="b4">Before</Button>
+    <br><br>
+    <button id="b5">Remove</button>
+    <button id="b6">Empty</button>
+    </div>
+    <div id= "mainDiv">
+        <p id="p1" class="p1class" value="hello p1">This is 1st <B>paragraph</B> in divison</p>
+        <p id="p2" class="p1class" value="hello p2">This is 2nd <B>paragraph</B> in divison</p>
+    </div>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#mainDiv").append("<p>this is second para</p>");
+        });
+    });
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            $("#mainDiv").after("<p>this is para</p>");
+        });
+    });
+    $(document).ready(function(){
+        $("#b3").click(function(){
+            $("#mainDiv").prepend("<p> second para</p>");
+        });
+    });
+    $(document).ready(function(){
+        $("#b4").click(function(){
+            $("#mainDiv").before("<p>para</p>");
+        });
+    });
+    $(document).ready(function(){
+        $("#b5").click(function(){
+            //$("#mainDiv").remove();
+            $("p").remove("#p1");
+        });
+    });
+    $(document).ready(function(){
+        $("#b6").click(function(){
+            $("#mainDiv").empty();
+        });
+    });
+</script>

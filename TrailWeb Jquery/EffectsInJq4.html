@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="div1" class="div">
+        <p>this is paragraph in 1st div</p></div>
+    <div id="div2" class="div"> 
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ul>
+    </div>
+    <div id="div3" class="div">
+        <p>this is paragraph in 3rd division </p>
+    </div> 
+    <button id="btn1">click to hide</button>
+    <button id="btn2">click to show</button>
+    <button id="btn3">click to toggle</button> 
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+    // $(document).ready(function(){
+    //     $("#btn1").click(function(){
+    //         $("#div3").hide();
+    //     });
+    //     $("#btn2").click(function(){
+    //         $("#div3").show();
+    //     });
+    //     $("#btn3").click(function(){
+    //         $("#div3").toggle();
+    //     });
+    // });
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#div3").slideUp();
+        });
+        $("#btn2").click(function(){
+            $("#div3").slideDown();
+        });
+        $("#btn3").click(function(){
+            $("#div3").slideToggle();
+        });
+    });
+
+</script>

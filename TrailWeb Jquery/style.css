@@ -1,0 +1,14 @@
+.div{
+    color:blueviolet;
+    border: solid 2px black;
+    margin: 5px; 
+    padding : 10px;
+
+}
+.mycube{
+    width : 100px;
+    height : 100px;
+    background: blueviolet;
+    opacity: 0.5;
+    position: absolute; 
+}

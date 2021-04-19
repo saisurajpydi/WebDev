@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>jquery for DOM manipulation</h1>
+    <link rel="stylesheet" href="cas.css">
+</head>
+<body>
+    <div id="div1"> 
+        <p id="p1" class="p1class" value="hello world">this is <b>paragraph</b> in div</p>
+    </div>
+    <button id="btn1" >action</button>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+    // text() css() html() attr()
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        //$("#p1").text("hello world");
+        //$("#p1").html(" <b>paragraph</b> in div");
+        //alert($("#p1").attr("value"));
+        //alert($("#p1").attr("class"));
+        //alert($("#p1").css("class"));
+        // alert($("#p1").css("color"));
+        // alert($("#p1").css("font-family"));
+        // alert($("#p1").css("font-size"));
+        alert($("#div1").css("border"));
+    });
+});
+</script>

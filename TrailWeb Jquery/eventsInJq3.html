@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="div">
+        <p>this is paragraph in 1st div</p></div>
+    <div id="div2" class="div"> 
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ul>
+    </div>
+    <div id="div3" class="div">
+        <p>this is paragraph in 3rd division </p>
+    </div>  
+    <button id="btn1">single click me</button>
+    <button id="btn2">double click me</button>
+    <button id="btn3">mouseover click me</button>
+    <button id="btn4">mouseout click me</button>
+    <button id="btn5">mouseout and mouseover click me</button>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+//good practice
+$(document).ready(function(){
+    $("#btn1").click(fn1);
+    $("#btn2").dblclick(fn1);
+    $("#btn3").mouseenter(fn2);
+    $("#btn4").mouseleave(fn3);
+    $("#btn5").hover(fn2,fn3); 
+    function fn1(){
+        $("#div1").fadeToggle(1000);
+    }
+    function fn2(){
+        $("#div3").fadeOut();
+    }
+    function fn3(){
+        $("#div3").fadeIn();
+    }
+
+
+
+});
+</script>
