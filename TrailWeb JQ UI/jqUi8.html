@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=i, initial-scale=1.0">
+    <title>resizable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css">
+
+</head>
+<body>
+    <h2>resizable in query UI</h2>
+    <div id="div1">
+        <img id="img1" src="image.jpeg" width=250px alt="unavilable">
+    </div>
+    
+</body>
+</html>
+
+<!-- jq script -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+
+
+<!-- jq ui  -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>
+
+<script>
+    $("#img1").resizable();
+    // {
+    //     maxWidth: 500,
+    //     maxHeight: 500,
+    //     autoHide: true,
+    //     //distance: 200,
+    //     ghost: true,
+    //     aspectRatio: true,
+    // }
+</script>

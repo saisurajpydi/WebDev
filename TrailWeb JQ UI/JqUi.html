@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery UI | ∏D </title>
+    <link rel="stylesheet" href="jquicss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css">
+
+</head>
+<body>
+    <div id = "myDiv">
+        <h1>introduction to JQuery UI</h1>
+        <input id="dateinput" placeholder="click to get datepicker" type="text">
+    </div>
+</body>
+</html>
+
+<!-- jq script -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+
+
+<!-- jq ui  -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script> -->
+<!-- <script src="jqui/jquery-ui.js" ></script> -->
+
+<script>
+    $("#dateinput").datepicker({
+        numberOfMonths: 2,
+        changeYear: true,
+        changeMonth: true,
+        showWeek: true,
+        weekHeader: "wk no",
+        showOtherMonths: true,
+        minDate: new Date(2017,0,1), // yr mnt day
+        maxDate: new Date(2020,0,1)
+    });
+</script>
